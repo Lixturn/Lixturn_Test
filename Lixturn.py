@@ -2,6 +2,7 @@ import discord
 import time
 import random
 import datetime
+import os
 
 nowdate = datetime.datetime.now()
 client = discord.Client()
@@ -155,8 +156,8 @@ async def on_message(message):
 
 
 
-
-client.run("ODIyMDAyNzczMzA5Nzg0MDY2.YFL7vQ.qCyrpnDXzEFLhZuhoC9TCz77uTQ")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
 
